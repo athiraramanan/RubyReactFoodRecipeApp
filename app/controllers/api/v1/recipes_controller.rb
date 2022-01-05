@@ -1,6 +1,6 @@
 class Api::V1::RecipesController < ApplicationController
   def index
-    recipies =  Recipe.all.order(created_at: desc)
+    recipies = Recipe.all.order('created_at desc')
     render json: recipies
   end
 
