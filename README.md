@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a sample api application for food recipe creation.
 
 Things you may want to cover:
 
 * Ruby version
-
-* System dependencies
-
+	ruby '2.6.3'
+* Rails Version
+	6.1.4
 * Configuration
-
+	rails new rails_react_recipe -d=postgresql -T --webpack=react --skip-coffee
 * Database creation
+	cd rails_react_recipe
+	rails db:create
+	rails db:migrate
+* Front End Application Setup
+	cd rails_react_recipe
+	yarn add react-router-dom bootstrap jquery popper.js
+* Home Page
+	rails g controller Homepage index
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
