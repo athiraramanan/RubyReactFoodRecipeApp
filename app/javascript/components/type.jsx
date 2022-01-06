@@ -1,0 +1,1 @@
+export const ErrorMessage = 'Network response was not ok.'

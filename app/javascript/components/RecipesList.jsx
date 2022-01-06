@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ErrorMessage } from './type'
 
-class Recipes extends React.Component{
+class RecipesList extends React.Component{
 		constructor(props){
 			super(props);
 			this.state = {recipes: [] };
@@ -14,7 +15,7 @@ class Recipes extends React.Component{
 					if(response.ok){
 						return response.json();
 					}
-					throw new Error("Network response was not ok.");
+					throw new Error('ErrorMessage');
 				})
 				.then(response =>this.setState({recipes: response}))
 				.catch(() => this.props.history.push("/"))
@@ -27,7 +28,7 @@ class Recipes extends React.Component{
 	        <div className="card mb-4">
 	          <img
 	            src={recipe.image}
-	            className="card-img-top"
+	            className="card-img-top img-size"
 	            alt={`${recipe.name} image`}
 	          />
 	          <div className="card-body">
@@ -78,4 +79,4 @@ class Recipes extends React.Component{
 	    );
  	 }
 }
-export default Recipes;
+export default RecipesList;
